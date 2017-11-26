@@ -16,7 +16,7 @@
               integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
               crossorigin="anonymous">
 
-        <link href="https://fonts.googleapis.com/css?family=Iceberg" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Alegreya:700i" rel="stylesheet">
 
         <link rel="stylesheet" href="css/index.css">
 
@@ -25,7 +25,7 @@
         <header>
 
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				<a class="navbar-brand" href="#">Canon4Life</a>
+				<a id="siteBrand" class="navbar-brand" href="#">Canon4Life</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav"
 						aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -46,9 +46,11 @@
 							<a class="nav-link" href="#contact">Contact Us</a>
 						</li>
 					</ul>
-					<form id="searchForm" class="form-inline my-2 my-lg-0">
+					<form id="searchForm" class="form-inline my-2 my-lg-0 flex-nowrap" action="#">
 						<input class="form-control mr-sm-2" type="search" placeholder="Search">
-						<button class="btn btn-default my-2 my-sm-0">Search</button>
+						<button id="searchBtn" class="btn btn-default my-2 my-sm-0">
+							<i class="fa fa-search"></i>
+						</button>
 					</form>
 				</div>
 			</nav>
@@ -57,30 +59,45 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-lg-6">
-						<div id="homeImg" aria-hidden="true" aria-label="Home section image"></div>
+						<div id="homeImg" class="background-image row"
+							 aria-hidden="true" aria-label="Home section image"></div>
+						<h1 id="headline" class="cfl-font cfl-red">Capturing life one snapshot at a time</h1>
 					</div>
 					<div class="anchor-point" id="about" aria-hidden="true"></div>
 					<div class="col-12 col-lg-6">
-						<h3 class="section-header">ABOUT</h3>
-						<p>About Text Here!</p>
+						<h3 class="section-header cfl-font cfl-red">ABOUT</h3>
+						<p>Canon4Life is a site devoted to the Canon line of cameras. We believe that Canon's cameras
+							are the only sensible option for any photographer. This site highlights the features of
+							some of Canon's best cameras in our <a href="#products">Products</a> section.</p>
+						<p>In addition, you will find more information about Canon's company, as well as links to
+							learn more about this fantastic company.</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="anchor-point" aria-hidden="true" id="canon"></div>
 					<div class="col-12">
-						<h3 class="section-header">CANON</h3>
+						<h3 class="section-header cfl-font cfl-red">CANON</h3>
+						<h4 class="cfl-font cfl-red text-center">View the world through a different lens</h4>
 					</div>
 					<div class="col-12">
-						<div class="canonImg" aria-hidden="true" aria-label="Canon section image"></div>
+						<div id="canonImg" class="background-image row"
+							 aria-hidden="true" aria-label="Canon section image"></div>
+						<span class="photo-credit">By: Joseph Morris</span>
 					</div>
 					<div class="col-12">
-						<p>Canon text here!</p>
+						<p class="mt-3">Canon Inc. is a Japanese multinational corporation specialized in the manufacture of imaging
+							and optical products, including cameras, camcorders, photocopiers, steppers, computer
+							printers and medical equipment.</p>
+						<p>The cameras produced by Canon consistenly dominate the market in both quality and
+							affordability. Canon cameras remain unchallenged in terms of optical precision,
+							feature-to-cost ratio, and functionality. Use the links below to learn more about
+							this world-leader in camera technology.</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="anchor-point" aria-hidden="true" id="products"></div>
 					<div class="col-12">
-						<h3 class="section-header">PRODUCTS</h3>
+						<h3 class="section-header cfl-font cfl-red">PRODUCTS</h3>
 					</div>
 					<div class="col-12 d-flex flex-row flex-nowrap">
 						<div class="product"></div>
@@ -91,10 +108,10 @@
 						<div class="product"></div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row bg-light">
 					<div class="anchor-point" id="contact" aria-hidden="true"></div>
 					<div class="col-12">
-						<h3 class="section-header">CONTACT</h3>
+						<h3 class="section-header cfl-font cfl-red">CONTACT</h3>
 						<form id="contactForm">
 							<div class="form-row">
 								<div class="col-md-6">
@@ -128,7 +145,45 @@
 			</div>
 		</main>
         <footer>
-
+			<ul id="contactFooter">
+				<li>
+					<i class="fa fa-home"></i>
+					Canon4Life
+					<br>
+					123 Easy St.
+					<br>
+					Nowhere City, NY 12345
+				</li>
+				<li>
+					<i class="fa fa-phone"></i>
+					+1 (123) 456-7890
+				</li>
+				<li>
+					<i class="fa fa-envelope"></i>
+					<a href="#contact">Contact Us</a>
+				</li>
+			</ul>
+			<ul id="socialMedia" class="d-flex flex-nowrap justify-content-center">
+				<li>
+					<a href="https://fb.com/CanonUSA" class="fa fa-facebook"></a>
+				</li>
+				<li>
+					<a href="https://twitter.com/CanonUSA" class="fa fa-twitter"></a>
+				</li>
+				<li>
+					<a href="https://instagram.com/canonusa/" class="fa fa-instagram"></a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/company/canonusa" class="fa fa-linkedin"></a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/CanonUSA" class="fa fa-youtube"></a>
+				</li>
+			</ul>
+			<hr>
+			<span id="copyright" class="d-block text-center">© 2017 Joseph Morris - Text and Images belong to
+                <a href="https://www.usa.canon.com">Canon</a>,
+				<a href="https://en.wikipedia.org/wiki/Canon_Inc.">Wikipedia</a> and their respective contributors</span>
 		</footer>
 
         <script
