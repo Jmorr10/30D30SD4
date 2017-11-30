@@ -53,6 +53,15 @@ button:focus, .btn.focus, .btn:focus {
 #siteBrand {
     font-size: 2rem;
     font-weight: 500;
+    margin-right: 4px;
+}
+
+#shoppingCart {
+    flex: 1 0 48px;
+    margin: 0 8px;
+    color: #bf1a20;
+    cursor: pointer;
+    font-size: 1.2em;
 }
 
 #searchForm > input {
@@ -79,7 +88,7 @@ button:focus, .btn.focus, .btn:focus {
     position: absolute;
     top: 16px;
     padding: 16px;
-    max-height: 95px !important;
+    max-height: 93px !important;
     width: auto;
     left: 0;
     right: 0;
@@ -186,6 +195,10 @@ button:focus, .btn.focus, .btn:focus {
     margin-left: -47px;
 }
 
+.product-title {
+    text-align: center;
+}
+
 .lgi-divider {
     flex: 1;
     text-align: center;
@@ -203,6 +216,16 @@ button:focus, .btn.focus, .btn:focus {
 .product-features > div {
     flex: 1;
     padding: 16px;
+}
+
+.product-features > div.list-group-item:first-child > h3 {
+    font-size: calc(130%);
+    line-height: calc(130%);
+}
+
+.product-features > div.list-group-item:first-child > i {
+    font-size: calc(150%);
+    margin-top: 4px;
 }
 
 .lgi-item-header{
@@ -232,12 +255,12 @@ button:focus, .btn.focus, .btn:focus {
 
 .add-to-cart {
     width: 100%;
-    height: 70px;
+    height: 61px;
     background-color: #BF1A20;
     color: #FFFFFF;
     border-radius: 0.25rem;
     border: 1px solid rgba(0,0,0,.125);
-    font-size: 1.75rem;
+    font-size: calc(130%);
     font-weight: 500;
     margin-bottom: 16px;
 }
