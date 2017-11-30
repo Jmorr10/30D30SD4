@@ -13,7 +13,11 @@ html, body {
 }
 
 .cfl-red {
-    color: #EE1B22;
+    color: #BF1A20;
+}
+
+.cfl-bg-red {
+    background-color: #BF1A20;
 }
 
 .background-image {
@@ -31,13 +35,13 @@ hr {
 
     margin: 8px 0;
 
-    background: #EE1B22;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsla(358, 86%, 52%, 0.0)), color-stop(50%, hsla(358, 86%, 52%, 0.75)), color-stop(100%, hsla(358, 86%, 52%, 0.0)));
-    background: -webkit-linear-gradient(left, hsla(358, 86%, 52%, 0.0) 0%, hsla(358, 86%, 52%, 0.75) 50%, hsla(358, 86%, 52%, 0.0) 100%);
-    background: -moz-linear-gradient(left, hsla(358, 86%, 52%, 0.0) 0%, hsla(358, 86%, 52%, 0.75) 50%, hsla(358, 86%, 52%, 0.0) 100%);
-    background: -ms-linear-gradient(left, hsla(358, 86%, 52%, 0.0) 0%, hsla(358, 86%, 52%, 0.75) 50%, hsla(358, 86%, 52%, 0.0) 100%);
-    background: -o-linear-gradient(left, hsla(358, 86%, 52%, 0.0) 0%, hsla(358, 86%, 52%, 0.75) 50%, hsla(358, 86%, 52%, 0.0) 100%);
-    background: linear-gradient(left, hsla(358, 86%, 52%, 0.0) 0%, hsla(358, 86%, 52%, 0.75) 50%, hsla(358, 86%, 52%, 0.0) 100%);
+    background: #BF1A20;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsla(358, 76%, 43%, 0.0)), color-stop(50%, hsla(358, 76%, 43%, 0.75)), color-stop(100%, hsla(358, 76%, 43%, 0.0)));
+    background: -webkit-linear-gradient(left, hsla(358, 76%, 43%, 0.0) 0%, hsla(358, 76%, 43%, 0.75) 50%, hsla(358, 76%, 43%, 0.0) 100%);
+    background: -moz-linear-gradient(left, hsla(358, 76%, 43%, 0.0) 0%, hsla(358, 76%, 43%, 0.75) 50%, hsla(358, 76%, 43%, 0.0) 100%);
+    background: -ms-linear-gradient(left, hsla(358, 76%, 43%, 0.0) 0%, hsla(358, 76%, 43%, 0.75) 50%, hsla(358, 76%, 43%, 0.0) 100%);
+    background: -o-linear-gradient(left, hsla(358, 76%, 43%, 0.0) 0%, hsla(358, 76%, 43%, 0.75) 50%, hsla(358, 76%, 43%, 0.0) 100%);
+    background: linear-gradient(left, hsla(358, 76%, 43%, 0.0) 0%, hsla(358, 76%, 43%, 0.75) 50%, hsla(358, 76%, 43%, 0.0) 100%);
     border: 0;
 }
 
@@ -63,12 +67,24 @@ button:focus, .btn.focus, .btn:focus {
     height: 36px;
     line-height: 1;
     border-radius: 100px;
-    background-color: #EE1B22;
+    background-color: #BF1A20;
     color: #FFFFFF;
 }
 
 #searchBtn i {
     margin-left: -3px;
+}
+
+#canonLogo {
+    position: absolute;
+    top: 16px;
+    padding: 16px;
+    max-height: 95px !important;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #homeImg {
@@ -81,14 +97,17 @@ button:focus, .btn.focus, .btn:focus {
 
 #headline {
     display: inline;
-
     position: absolute;
-    top: 55px;
-
+    top: 128px;
     margin: 0 auto;
-    padding-right: 15px;
+    font-size: 1.75rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
 
-    font-size: 3rem;
+#headline_2 {
+    display: block;
     text-align: center;
 }
 
@@ -110,6 +129,147 @@ button:focus, .btn.focus, .btn:focus {
     color: #FFF;
     opacity: 0.7;
     text-align: center;
+}
+
+#productHolder {
+    flex: 2;
+    overflow-x: hidden;
+}
+
+#productSlider {
+    position: relative;
+    right: 0;
+    transition: right 0.75s;
+}
+
+.product-arrow {
+    height: 100%;
+    flex: 0 0 48px;
+}
+
+.product-arrow > i {
+    height: 48px;
+}
+
+.product-arrow.left {
+    margin-left: -16px;
+    margin-right: 5px;
+}
+
+.product-arrow.right {
+    margin-right: -16px
+}
+
+.product-arrow.disabled {
+    pointer-events: none;
+}
+
+.product-arrow.disabled > i {
+    color: grey !important;
+}
+
+.product {
+    padding: 0 !important;
+    margin: 0 32px;
+}
+
+.product:first-child {
+    margin-left: 0 !important;
+}
+
+.product:last-child {
+    margin-right: 0 !important;
+}
+
+.product-img {
+    width: 100vw;
+    margin-left: -47px;
+}
+
+.lgi-divider {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.expand.open {
+    transition: transform 0.5s;
+    transform: rotate(-90deg);
+}
+
+.product-features > div {
+    flex: 1;
+    padding: 16px;
+}
+
+.lgi-item-header{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.product-features .features {
+    margin-top: 2px;
+    margin-left: 16px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.features .feature {
+    width: 120px;
+}
+
+.features .feature:not(:first-child) {
+    margin-top: 16px;
+}
+
+.feature .feature-label {
+    display: block;
+    text-align: center;
+}
+
+.add-to-cart {
+    width: 100%;
+    height: 70px;
+    background-color: #BF1A20;
+    color: #FFFFFF;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,.125);
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.icon-lens,
+.icon-stabilizer{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+}
+
+.icon-lens {
+    height: 35px !important;
+    background: url("../img/lens.svg") no-repeat center;
+}
+
+.icon-stabilizer {
+    background: url("../img/stabilizer.svg") no-repeat center;
+}
+
+#submitForm {
+    width: 125px;
+    height: 48px;
+
+    margin: 0 auto 16px auto;
+    padding-top: .1em;
+
+    background-color: #BF1A20;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 #contactForm input:not(button),
@@ -152,7 +312,7 @@ button:focus, .btn.focus, .btn:focus {
     width: 48px;
     height: 48px;
     line-height: 48px;
-    background-color: #EE1B22;
+    background-color: #BF1A20;
     text-align: center;
     color: #FFFFFF !important;
 }
@@ -163,4 +323,5 @@ button:focus, .btn.focus, .btn:focus {
 
 #copyright {
     margin-bottom: 16px;
+    font-size: 13px;
 }
