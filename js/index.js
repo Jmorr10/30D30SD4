@@ -6,7 +6,8 @@ var RIGHT = "right",
     LEFT = "left",
     LEFT_ARROW = $("#productLeft"),
     RIGHT_ARROW = $("#productRight"),
-    SLIDER = $('#productSlider');
+    SLIDER = $('#productSlider'),
+    MENU = $('#mobileNav');
 
 setLeftArrowActive(false);
 
@@ -26,11 +27,8 @@ SLIDER.on("swiperight", function(e) {
     previousItem();
 });
 
-
-
-
 function nextItem() {
-    var slideAmount = $('body').width() - 35;
+    var slideAmount = $('#productHolder').width() + 64;
 
     if (RIGHT_ARROW.hasClass("disabled")) {
         return false;
@@ -46,7 +44,7 @@ function nextItem() {
 }
 
 function previousItem() {
-    var slideAmount = $('body').width() - 35;
+    var slideAmount = $('#productHolder').width() + 64;
 
     if (LEFT_ARROW.hasClass("disabled")) {
         return false;
@@ -93,6 +91,12 @@ function setActive(el, active) {
     var fn = (active) ? el.removeClass : el.addClass;
     fn.call(el, "disabled");
 }
+
+function hideMenu() {
+    MENU.collapse('hide');
+    return true;
+}
+
 
 
 
