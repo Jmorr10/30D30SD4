@@ -28,7 +28,7 @@
 				<a id="siteBrand" class="navbar-brand" href="#">Canon4Life</a>
 				<button id="shoppingCart" class="navbar-toggler d-none d-md-block"
 						type="button" aria-label="Shopping Cart" data-toggle="modal" data-target="#shoppingCartModal">
-					<span class="fa fa-shopping-cart cfl-red">(0)</span>
+					<span class="fa fa-shopping-cart cart-count cfl-red">(0)</span>
 				</button>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav"
 						aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,8 @@
 						</li>
 						<li class="nav-item d-md-none">
 							<a class="nav-link cfl-red" href="#" onclick="hideMenu()"
-							   data-toggle="modal" data-target="#shoppingCartModal">Shopping Cart<span>(0)</span></a>
+							   data-toggle="modal" data-target="#shoppingCartModal">Shopping Cart
+								<span class="cart-count">(0)</span></a>
 						</li>
 					</ul>
 					<form id="searchForm" class="form-inline my-2 my-lg-0 flex-nowrap" action="#">
@@ -122,7 +123,7 @@
 									<h4 class="product-title">EOS 5D Mark III</h4>
 									<img class="product-img" src="img/eos5dmarkiii.jpg" alt="Image of EOS 5D Mark III">
 									<h6 class="product-msrp">MSRP $2,799.00</h6>
-									<h5 class="product-our-price cfl-red">Our Price: $1999.00</h5>
+									<h5 class="product-our-price cfl-red">Our Price: <span class="price">$1999.00</span></h5>
 									<p class="product-blurb">With supercharged EOS performance and stunning full frame,
 										high-resolution image capture, the EOS 5D Mark III is designed to perform.
 										Special optical technologies like the 61-Point High Density Reticular AF and an
@@ -159,13 +160,14 @@
 											</div>
 										</div>
 									</div>
-									<button type="button" class="add-to-cart">Add to Cart</button>
+									<button type="button" class="add-to-cart"
+											onclick="addToCart(this)">Add to Cart</button>
 								</div>
 								<div id="eos5dmarkiii" class="product col-xs-12 col-md-4 col-lg-6">
 									<h4 class="product-title">EOS 5D Mark III</h4>
 									<img class="product-img" src="img/eos5dmarkiii.jpg" alt="Image of EOS 5D Mark III">
 									<h6 class="product-msrp">MSRP $2,799.00</h6>
-									<h5 class="product-our-price cfl-red">Our Price: $1999.00</h5>
+									<h5 class="product-our-price cfl-red">Our Price: <span class="price">$1999.00</span></h5>
 									<p class="product-blurb">With supercharged EOS performance and stunning full frame,
 										high-resolution image capture, the EOS 5D Mark III is designed to perform.
 										Special optical technologies like the 61-Point High Density Reticular AF and an
@@ -208,7 +210,7 @@
 									<h4 class="product-title">EOS 5D Mark III</h4>
 									<img class="product-img" src="img/eos5dmarkiii.jpg" alt="Image of EOS 5D Mark III">
 									<h6 class="product-msrp">MSRP $2,799.00</h6>
-									<h5 class="product-our-price cfl-red">Our Price: $1999.00</h5>
+									<h5 class="product-our-price cfl-red">Our Price: <span class="price">$1999.00</span></h5>
 									<p class="product-blurb">With supercharged EOS performance and stunning full frame,
 										high-resolution image capture, the EOS 5D Mark III is designed to perform.
 										Special optical technologies like the 61-Point High Density Reticular AF and an
@@ -251,7 +253,7 @@
 									<h4 class="product-title">EOS 5D Mark III</h4>
 									<img class="product-img" src="img/eos5dmarkiii.jpg" alt="Image of EOS 5D Mark III">
 									<h6 class="product-msrp">MSRP $2,799.00</h6>
-									<h5 class="product-our-price cfl-red">Our Price: $1999.00</h5>
+									<h5 class="product-our-price cfl-red">Our Price: <span class="price">$1999.00</span></h5>
 									<p class="product-blurb">With supercharged EOS performance and stunning full frame,
 										high-resolution image capture, the EOS 5D Mark III is designed to perform.
 										Special optical technologies like the 61-Point High Density Reticular AF and an
@@ -294,7 +296,7 @@
 									<h4 class="product-title">EOS 5D Mark III</h4>
 									<img class="product-img" src="img/eos5dmarkiii.jpg" alt="Image of EOS 5D Mark III">
 									<h6 class="product-msrp">MSRP $2,799.00</h6>
-									<h5 class="product-our-price cfl-red">Our Price: $1999.00</h5>
+									<h5 class="product-our-price cfl-red">Our Price: <span class="price">$1999.00</span></h5>
 									<p class="product-blurb">With supercharged EOS performance and stunning full frame,
 										high-resolution image capture, the EOS 5D Mark III is designed to perform.
 										Special optical technologies like the 61-Point High Density Reticular AF and an
@@ -337,7 +339,7 @@
 									<h4 class="product-title">EOS 5D Mark III</h4>
 									<img class="product-img" src="img/eos5dmarkiii.jpg" alt="Image of EOS 5D Mark III">
 									<h6 class="product-msrp">MSRP $2,799.00</h6>
-									<h5 class="product-our-price cfl-red">Our Price: $1999.00</h5>
+									<h5 class="product-our-price cfl-red">Our Price: <span class="price">$1999.00</span></h5>
 									<p class="product-blurb">With supercharged EOS performance and stunning full frame,
 										high-resolution image capture, the EOS 5D Mark III is designed to perform.
 										Special optical technologies like the 61-Point High Density Reticular AF and an
@@ -380,7 +382,50 @@
 									<h4 class="product-title">EOS 5D Mark III</h4>
 									<img class="product-img" src="img/eos5dmarkiii.jpg" alt="Image of EOS 5D Mark III">
 									<h6 class="product-msrp">MSRP $2,799.00</h6>
-									<h5 class="product-our-price cfl-red">Our Price: $1999.00</h5>
+									<h5 class="product-our-price cfl-red">Our Price: <span class="price">$1999.00</span></h5>
+									<p class="product-blurb">With supercharged EOS performance and stunning full frame,
+										high-resolution image capture, the EOS 5D Mark III is designed to perform.
+										Special optical technologies like the 61-Point High Density Reticular AF and an
+										extended ISO range of 100–25600 make the EOS 5D Mark III ideal for shooting weddings
+										in the studio or out in the field, and great for still photography.</p>
+									<div class="list-group product-features mb-3">
+										<div data-toggle="collapse" data-target="#eos5dmarkiii .hidden-features"
+											 onclick="$(this).children('.expand').toggleClass('open');"
+											 class="list-group-item d-flex flex-nowrap cfl-bg-red text-white">
+											<h3 class="m-0 w-100">Product Features</h3>
+											<i class="fa fa-caret-left fa-2x expand" style="margin-top: 5px;"></i>
+										</div>
+										<div class="collapse hidden-features p-0">
+											<div class="list-group-item d-flex flex-nowrap align-items-center">
+												<span class="lgi-item-header">Effective Pixels:</span>
+												<div class="lgi-divider">22.3 Megapixels</div>
+											</div>
+											<div class="list-group-item d-flex flex-nowrap align-items-center">
+												<span class="lgi-item-header">Features:</span>
+												<div class="features lgi-divider d-flex flex-column flex-lg-row">
+													<div class="feature">
+														<i class="fa icon-lens"></i>
+														<span class="feature-label">Swappable Lenses</span>
+													</div>
+													<div class="feature">
+														<i class="fa fa-video-camera fa-2x"></i>
+														<span class="feature-label">HD Video Capture</span>
+													</div>
+													<div class="feature">
+														<i class="fa fa-tachometer fa-2x"></i>
+														<span class="feature-label">Highspeed Shooting</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button type="button" class="add-to-cart">Add to Cart</button>
+								</div>
+								<div id="eos5dmarkiii" class="product col-xs-12 col-md-4 col-lg-6">
+									<h4 class="product-title">EOS 5D Mark III</h4>
+									<img class="product-img" src="img/eos5dmarkiii.jpg" alt="Image of EOS 5D Mark III">
+									<h6 class="product-msrp">MSRP $2,799.00</h6>
+									<h5 class="product-our-price cfl-red">Our Price: <span class="price">$1999.00</span></h5>
 									<p class="product-blurb">With supercharged EOS performance and stunning full frame,
 										high-resolution image capture, the EOS 5D Mark III is designed to perform.
 										Special optical technologies like the 61-Point High Density Reticular AF and an
@@ -511,7 +556,7 @@
 		</footer>
 
 		<div id="shoppingCartModal" class="modal fade" role="dialog" tabindex="-1" aria-hidden="true"
-			 aria-labelledby="modalTitle">
+			 aria-labelledby="modalTitle" data-cart-count="0">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -521,8 +566,10 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body">
-						<p>There are currently no items in your cart.</p>
+					<div class="modal-body d-flex flex-column">
+						<p class="no-items">There are currently no items in your cart.</p>
+						<hr id="subtotalDivider">
+						<span id="subtotalHolder">Subtotal: $<span id="subtotal"></span></span>
 					</div>
 					<div class="modal-footer">
 						<button data-dismiss="modal" class="btn btn-secondary" type="button">Close</button>
@@ -531,6 +578,42 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="addedToCartModal"
+			 class="modal fade" tabindex="-1" aria-labelledby="addToCartTitle" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title" id="addToCartTitle">Success!</h3>
+						<button role="button" class="close" aria-label="Close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Added item to cart!
+					</div>
+					<div class="modal-footer">
+						<button data-dismiss="modal" class="btn btn-secondary" type="button">Close</button>
+						<button id="goToCart" data-dismiss="modal" data-toggle="modal" data-target="#shoppingCartModal"
+								class="btn cfl-bg-red text-white" type="button">Go to Cart</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script id="scEntryTemplate" type="text/template">
+			<div class="cart-entry d-flex flex-row flex-nowrap align-items-center">
+				<img class="item-img" src="" alt="">
+				<div class="item-description d-flex flex-column align-items-start">
+					<span class="item-title cfl-red"></span>
+					<span class="small" aria-label="Item quantity">Quantity: <span class="item-quantity"></span></span>
+					<span class="item-price small"></span>
+				</div>
+				<button type="button" class="delete-item" onclick="removeFromCart(this);" aria-label="Delete item">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</script>
 
         <script
                 src="https://code.jquery.com/jquery-3.2.1.min.js"

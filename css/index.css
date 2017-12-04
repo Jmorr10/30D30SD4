@@ -8,6 +8,18 @@ html, body {
     overflow-x: hidden;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+main {
+    padding-top: 74px;
+}
+
 .cfl-font {
     font-family: "Alegreya", serif;
 }
@@ -164,7 +176,7 @@ button:focus, .btn.focus, .btn:focus {
 #productSlider {
     position: relative;
     right: 0;
-    transition: right 0.75s;
+    transition: right 0.45s;
 }
 
 .product-arrow {
@@ -366,6 +378,10 @@ button:focus, .btn.focus, .btn:focus {
 }
 
 /* Modal CSS */
+.modal-dialog {
+    margin-top: 84px !important;
+}
+
 #itemCount {
     align-self: center;
     margin-top: 4px;
@@ -374,4 +390,48 @@ button:focus, .btn.focus, .btn:focus {
 
 #shoppingCartModal .modal-content {
     min-height: 300px;
+}
+
+#shoppingCartModal:not([data-cart-count="0"]) .modal-body > p {
+    display: none;
+}
+
+#shoppingCartModal[data-cart-count="0"] .modal-body > hr,
+#shoppingCartModal[data-cart-count="0"] .modal-body > span#subtotalHolder,
+#shoppingCartModal[data-cart-count="0"] .modal-footer > button#checkOut {
+    display: none;
+}
+
+.item-img {
+    max-width: 25%;
+}
+
+.item-description {
+    flex: 1;
+}
+
+.item-title {
+    font-weight: 500;
+}
+
+.delete-item {
+    background-color: white;
+    border: none;
+    height: 40px;
+    color: #BF1A20;
+    font-weight: 900;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    padding: 0;
+}
+
+#subtotalDivider {
+    order: 98;
+    margin-top: auto;
+}
+
+#subtotalHolder {
+    order: 99;
+    text-align: right;
+    font-weight: 500;
 }
